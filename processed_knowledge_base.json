@@ -1,0 +1,491 @@
+[
+  {
+    "document_id": "video-transcript-001",
+    "content": "Chào mừng các bạn đến với buổi học hôm nay về Data Pipeline Engineering. Hôm nay chúng ta sẽ nói về việc xử lý dữ liệu phi cấu trúc, ví dụ như PDF và Video. Một vấn đề lớn là Semantic Drift. Các bạn có biết không? Dạ em có nghe qua, nhưng nó có liên quan gì đến Zillow không ạ? Có chứ! Zillow là ví dụ điển hình của việc mô hình bị hỏng do dữ liệu đầu vào thay đổi. Đừng để mô hình của bạn trở thành 'rác vào, rác ra'. À, một lưu ý nhỏ cho bài tập: Giá của sản phẩm VinAI Pro là năm trăm nghìn VND. Nhớ nhé, 500,000 VND. Bây giờ chúng ta hãy bắt đầu thực hành.",
+    "source_type": "Video",
+    "author": "Unknown",
+    "timestamp": null,
+    "tags": [
+      "transcript",
+      "lecture"
+    ],
+    "source_metadata": {
+      "original_file": "demo_transcript.txt",
+      "detected_price_vnd": 500000
+    }
+  },
+  {
+    "document_id": "html-SP-001",
+    "content": "Product: VinAI Laptop Pro 14\", Category: Laptop, Price: 28,500,000 VND, Stock: 45, Rating: 4.8/5",
+    "source_type": "HTML",
+    "author": "VinShop",
+    "timestamp": null,
+    "tags": [
+      "product",
+      "catalog",
+      "laptop"
+    ],
+    "source_metadata": {
+      "original_file": "product_catalog.html",
+      "product_id": "SP-001",
+      "product_name": "VinAI Laptop Pro 14\"",
+      "category": "Laptop",
+      "price_raw": "28,500,000 VND",
+      "price_numeric": "28500000",
+      "stock": "45",
+      "rating": "4.8/5"
+    }
+  },
+  {
+    "document_id": "html-SP-004",
+    "content": "Product: Bàn phím cơ Blue Switch, Category: Phụ kiện, Price: 1,850,000 VND, Stock: -5, Rating: 4.5/5",
+    "source_type": "HTML",
+    "author": "VinShop",
+    "timestamp": null,
+    "tags": [
+      "product",
+      "catalog",
+      "phụ kiện"
+    ],
+    "source_metadata": {
+      "original_file": "product_catalog.html",
+      "product_id": "SP-004",
+      "product_name": "Bàn phím cơ Blue Switch",
+      "category": "Phụ kiện",
+      "price_raw": "1,850,000 VND",
+      "price_numeric": "1850000",
+      "stock": "-5",
+      "rating": "4.5/5"
+    }
+  },
+  {
+    "document_id": "html-SP-005",
+    "content": "Product: Tai nghe chống ồn AI-Ear Pro, Category: Âm thanh, Price: 3,200,000 VND, Stock: 28, Rating: không có đánh giá",
+    "source_type": "HTML",
+    "author": "VinShop",
+    "timestamp": null,
+    "tags": [
+      "product",
+      "catalog",
+      "âm thanh"
+    ],
+    "source_metadata": {
+      "original_file": "product_catalog.html",
+      "product_id": "SP-005",
+      "product_name": "Tai nghe chống ồn AI-Ear Pro",
+      "category": "Âm thanh",
+      "price_raw": "3,200,000 VND",
+      "price_numeric": "3200000",
+      "stock": "28",
+      "rating": "không có đánh giá"
+    }
+  },
+  {
+    "document_id": "csv-1",
+    "content": "Sale Record: Laptop VinAI Pro 14 in Electronics, Price: $1200, Date: 2026-01-15",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "electronics"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Laptop VinAI Pro 14",
+      "category": "Electronics",
+      "price_raw": "$1200",
+      "price_cleaned": 1200.0,
+      "currency": "USD",
+      "date_raw": "2026-01-15",
+      "date_normalized": "2026-01-15",
+      "seller_id": "S001",
+      "stock_quantity": "45.0"
+    }
+  },
+  {
+    "document_id": "csv-2",
+    "content": "Sale Record: Wireless Mouse in Electronics, Price: 250000, Date: 15/01/2026",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "electronics"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Wireless Mouse",
+      "category": "Electronics",
+      "price_raw": "250000",
+      "price_cleaned": 250000.0,
+      "currency": "VND",
+      "date_raw": "15/01/2026",
+      "date_normalized": "2026-01-15",
+      "seller_id": "S002",
+      "stock_quantity": "120.0"
+    }
+  },
+  {
+    "document_id": "csv-4",
+    "content": "Sale Record: Mechanical Keyboard in Electronics, Price: 1500000, Date: 2026-01-17",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "electronics"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Mechanical Keyboard",
+      "category": "Electronics",
+      "price_raw": "1500000",
+      "price_cleaned": 1500000.0,
+      "currency": "VND",
+      "date_raw": "2026-01-17",
+      "date_normalized": "2026-01-17",
+      "seller_id": "S004",
+      "stock_quantity": "30.0"
+    }
+  },
+  {
+    "document_id": "csv-5",
+    "content": "Sale Record: HDMI Cable 2m in Accessories, Price: five dollars, Date: 17-01-2026",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "accessories"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "HDMI Cable 2m",
+      "category": "Accessories",
+      "price_raw": "five dollars",
+      "price_cleaned": 5.0,
+      "currency": "USD",
+      "date_raw": "17-01-2026",
+      "date_normalized": "2026-01-17",
+      "seller_id": "S005",
+      "stock_quantity": "200.0"
+    }
+  },
+  {
+    "document_id": "csv-6",
+    "content": "Sale Record: Monitor 27 inch 4K in Electronics, Price: 8500000, Date: 2026-01-18",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "electronics"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Monitor 27 inch 4K",
+      "category": "Electronics",
+      "price_raw": "8500000",
+      "price_cleaned": 8500000.0,
+      "currency": "VND",
+      "date_raw": "2026-01-18",
+      "date_normalized": "2026-01-18",
+      "seller_id": "S001",
+      "stock_quantity": "12.0"
+    }
+  },
+  {
+    "document_id": "csv-7",
+    "content": "Sale Record: Webcam HD 1080p in Electronics, Price: -350000, Date: 2026/01/19",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "electronics"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Webcam HD 1080p",
+      "category": "Electronics",
+      "price_raw": "-350000",
+      "price_cleaned": -350000.0,
+      "currency": "VND",
+      "date_raw": "2026/01/19",
+      "date_normalized": "2026-01-19",
+      "seller_id": "S002",
+      "stock_quantity": "55.0"
+    }
+  },
+  {
+    "document_id": "csv-8",
+    "content": "Sale Record: SSD 1TB NVMe in Electronics, Price: 2200000, Date: 19 Jan 2026",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "electronics"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "SSD 1TB NVMe",
+      "category": "Electronics",
+      "price_raw": "2200000",
+      "price_cleaned": 2200000.0,
+      "currency": "VND",
+      "date_raw": "19 Jan 2026",
+      "date_normalized": "2026-01-19",
+      "seller_id": "S003",
+      "stock_quantity": "88.0"
+    }
+  },
+  {
+    "document_id": "csv-9",
+    "content": "Sale Record: Laptop Stand in Accessories, Price: 450000, Date: 2026-01-20",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "accessories"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Laptop Stand",
+      "category": "Accessories",
+      "price_raw": "450000",
+      "price_cleaned": 450000.0,
+      "currency": "VND",
+      "date_raw": "2026-01-20",
+      "date_normalized": "2026-01-20",
+      "seller_id": "S004",
+      "stock_quantity": "nan"
+    }
+  },
+  {
+    "document_id": "csv-10",
+    "content": "Sale Record: Bluetooth Speaker in Electronics, Price: 850000, Date: 2026-01-20",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "electronics"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Bluetooth Speaker",
+      "category": "Electronics",
+      "price_raw": "850000",
+      "price_cleaned": 850000.0,
+      "currency": "VND",
+      "date_raw": "2026-01-20",
+      "date_normalized": "2026-01-20",
+      "seller_id": "S005",
+      "stock_quantity": "40.0"
+    }
+  },
+  {
+    "document_id": "csv-11",
+    "content": "Sale Record: Gaming Headset in Electronics, Price: 1200000, Date: 2026-01-21",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "electronics"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Gaming Headset",
+      "category": "Electronics",
+      "price_raw": "1200000",
+      "price_cleaned": 1200000.0,
+      "currency": "VND",
+      "date_raw": "2026-01-21",
+      "date_normalized": "2026-01-21",
+      "seller_id": "S001",
+      "stock_quantity": "25.0"
+    }
+  },
+  {
+    "document_id": "csv-12",
+    "content": "Sale Record: Power Bank 20000mAh in Accessories, Price: 600000, Date: 21/01/2026",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "accessories"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Power Bank 20000mAh",
+      "category": "Accessories",
+      "price_raw": "600000",
+      "price_cleaned": 600000.0,
+      "currency": "VND",
+      "date_raw": "21/01/2026",
+      "date_normalized": "2026-01-21",
+      "seller_id": "S002",
+      "stock_quantity": "70.0"
+    }
+  },
+  {
+    "document_id": "csv-14",
+    "content": "Sale Record: Phone Case Premium in Accessories, Price: 150000, Date: January 22nd 2026",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "accessories"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Phone Case Premium",
+      "category": "Accessories",
+      "price_raw": "150000",
+      "price_cleaned": 150000.0,
+      "currency": "VND",
+      "date_raw": "January 22nd 2026",
+      "date_normalized": "2026-01-22",
+      "seller_id": "S004",
+      "stock_quantity": "300.0"
+    }
+  },
+  {
+    "document_id": "csv-15",
+    "content": "Sale Record: Laptop VinAI Pro 14 in Electronics, Price: 1200, Date: 2026-01-22",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "electronics"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Laptop VinAI Pro 14",
+      "category": "Electronics",
+      "price_raw": "1200",
+      "price_cleaned": 1200.0,
+      "currency": "USD",
+      "date_raw": "2026-01-22",
+      "date_normalized": "2026-01-22",
+      "seller_id": "S001",
+      "stock_quantity": "45.0"
+    }
+  },
+  {
+    "document_id": "csv-16",
+    "content": "Sale Record: Tablet 10 inch in Electronics, Price: 5500000, Date: 2026-01-23",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "electronics"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Tablet 10 inch",
+      "category": "Electronics",
+      "price_raw": "5500000",
+      "price_cleaned": 5500000.0,
+      "currency": "VND",
+      "date_raw": "2026-01-23",
+      "date_normalized": "2026-01-23",
+      "seller_id": "S005",
+      "stock_quantity": "20.0"
+    }
+  },
+  {
+    "document_id": "csv-17",
+    "content": "Sale Record: Earbuds TWS Pro in Electronics, Price: 750000, Date: 23-01-2026",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "electronics"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Earbuds TWS Pro",
+      "category": "Electronics",
+      "price_raw": "750000",
+      "price_cleaned": 750000.0,
+      "currency": "VND",
+      "date_raw": "23-01-2026",
+      "date_normalized": "2026-01-23",
+      "seller_id": "S001",
+      "stock_quantity": "60.0"
+    }
+  },
+  {
+    "document_id": "csv-18",
+    "content": "Sale Record: Screen Protector in Accessories, Price: 85000, Date: 2026/01/24",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "accessories"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "Screen Protector",
+      "category": "Accessories",
+      "price_raw": "85000",
+      "price_cleaned": 85000.0,
+      "currency": "VND",
+      "date_raw": "2026/01/24",
+      "date_normalized": "2026-01-24",
+      "seller_id": "S002",
+      "stock_quantity": "500.0"
+    }
+  },
+  {
+    "document_id": "csv-19",
+    "content": "Sale Record: External HDD 2TB in Electronics, Price: 1800000, Date: 24 Jan 2026",
+    "source_type": "CSV",
+    "author": "Sales System",
+    "timestamp": null,
+    "tags": [
+      "sales",
+      "transaction",
+      "electronics"
+    ],
+    "source_metadata": {
+      "original_file": "sales_records.csv",
+      "product_name": "External HDD 2TB",
+      "category": "Electronics",
+      "price_raw": "1800000",
+      "price_cleaned": 1800000.0,
+      "currency": "VND",
+      "date_raw": "24 Jan 2026",
+      "date_normalized": "2026-01-24",
+      "seller_id": "S003",
+      "stock_quantity": "35.0"
+    }
+  }
+]
